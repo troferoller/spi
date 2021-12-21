@@ -12,15 +12,7 @@ void SysTick_Handler(void)
 	HAL_IncTick();
 	HAL_SYSTICK_IRQHandler();
 }
-void	CS_ON()
-{
-	GPIO_ResetBits(GPIOE, GPIO_PIN_3);
-}
 
-void CS_OFF()
-{
-	GPIO_SetBits(GPIOE, GPIO_PIN_3);
-}
 void SPI1_Init()
 {
 	HAL_Init();
@@ -36,6 +28,7 @@ void SPI1_Init()
 	GPIO_InitStructure.Mode = GPIO_MODE_AF_PP;
 	GPIO_InitStructure.Speed = GPIO_SPEED_FREQ_HIGH;
 	GPIO_InitStructure.Pull = GPIO_NOPULL;
+	GPIO_InitStructure.Alternate = GPIO_AF5_SPI1;
 	HAL_GPIO_Init(GPIOA, &GPIO_InitStructure);
 	
 	HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
@@ -44,9 +37,10 @@ void SPI1_Init()
 	
 	GPIO_InitStructure.Pin = GPIO_PIN_3;
 	
-	GPIO_InitStructure.Mode = GPIO_MODE_AF_PP;
+	GPIO_InitStructure.Mode = GPIO_MODE_OUTPUT_PP;
 	GPIO_InitStructure.Speed = GPIO_SPEED_FREQ_HIGH;
 	GPIO_InitStructure.Pull = GPIO_NOPULL;
+	GPIO_InitStructure.Alternate = GPIO_AF5_SPI1;
 	HAL_GPIO_Init(GPIOE, &GPIO_InitStructure);
 	
 	
@@ -77,6 +71,7 @@ int main(void)
 	SPI_I2S_SendData(SPI1, 0x00);
 	while (SPI_I2S_GetFlagStatus(SPI1, SPI_I2S_FLAG_TXE) == SET) {}
 	SPIData = SPI_I2S_ReceiveData(SPI1);
+
 	for (;;)
 	{
 	}

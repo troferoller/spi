@@ -1,21 +1,11 @@
 ﻿  EmbeddedProject3.c
-  system_stm32f4xx.c
-  startup_stm32f407xx.c
-  stm32f4xx_hal.c
+  stm32f4xx_hal_dma2d.c
+  stm32f4xx_hal_dma_ex.c
+  stm32f4xx_hal_dsi.c
   EmbeddedProject3.c(3):
 C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h(85,2): error :  conflicting types for 'SPI_InitTypeDef'
      85 | }SPI_InitTypeDef;
         |  ^~~~~~~~~~~~~~~
-  stm32f4xx_hal_adc.c
-  stm32f4xx_hal_adc_ex.c
-  stm32f4xx_hal_can.c
-  stm32f4xx_hal_cec.c
-  stm32f4xx_hal_cortex.c
-  stm32f4xx_hal_crc.c
-  stm32f4xx_hal_cryp.c
-  stm32f4xx_hal_cryp_ex.c
-  stm32f4xx_hal_dac.c
-  stm32f4xx_hal_dac_ex.c
   C:\spi\EmbeddedProject3\stm32f4xx_hal_conf.h(403):
   C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h(30):
   EmbeddedProject3.c(1):
@@ -292,4 +282,3 @@ C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.st
   C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h(317): note :  this is the location of the previous definition
     317 | #define SPI_FLAG_BSY                    SPI_SR_BSY    /* SPI status flag: Busy flag                      */
         | 
-  stm32f4xx_hal_dcmi.c
