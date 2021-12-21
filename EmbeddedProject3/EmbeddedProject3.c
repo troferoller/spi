@@ -6,6 +6,7 @@
 extern "C"
 #endif
 uint8_t SPIData = 0;
+SPI_HandleTypeDef hspi1;
 
 void SysTick_Handler(void)
 {
@@ -16,8 +17,6 @@ void SysTick_Handler(void)
 void SPI1_Init()
 {
 	HAL_Init();
-	SPI_HandleTypeDef	        hspi;
-	SPI_TypeDef                 *spi;
 	__GPIOA_CLK_ENABLE();
 	__GPIOE_CLK_ENABLE();
 	
@@ -42,29 +41,31 @@ void SPI1_Init()
 	GPIO_InitStructure.Pull = GPIO_NOPULL;
 	GPIO_InitStructure.Alternate = GPIO_AF5_SPI1;
 	HAL_GPIO_Init(GPIOE, &GPIO_InitStructure);
-	
-	
-	__SPI1_CLK_ENABLE();
-
-	hspi.Instance = spi;
-	hspi.Init.Mode = SPI_MODE_MASTER;
-	hspi.Init.Direction = SPI_DIRECTION_2LINES;
-	hspi.Init.DataSize = SPI_DATASIZE_8BIT;
-	hspi.Init.CLKPolarity = SPI_POLARITY_LOW;				  
-	hspi.Init.CLKPhase = SPI_PHASE_1EDGE;
-	hspi.Init.NSS = SPI_NSS_SOFT;
-	hspi.Init.FirstBit = SPI_FIRSTBIT_MSB;
-	hspi.Init.TIMode = SPI_TIMODE_DISABLE;
-	hspi.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
-	hspi.Init.CRCPolynomial = 10;
-	
-	HAL_SPI_MspInit(&hspi);
 }
+	
+	void MX_SPI1_Init(void)
+	{
+
+		hspi1.Instance = SPI1;
+		hspi1.Init.Mode = SPI_MODE_MASTER;
+		hspi1.Init.Direction = SPI_DIRECTION_2LINES;
+		hspi1.Init.DataSize = SPI_DATASIZE_8BIT;
+		hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
+		hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
+		hspi1.Init.NSS = SPI_NSS_SOFT;
+		hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_64;
+		hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
+		hspi1.Init.TIMode = SPI_TIMODE_DISABLED;
+		hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_ENABLED;
+		hspi1.Init.CRCPolynomial = 7;
+		HAL_SPI_Init(&hspi1);
+
+	}
 
 
 int main(void)
 {
-	SPI1_Init();
+	MX_SPI1_Init();
 
 	SPI_I2S_SendData(SPI1, 0x8F);
 	while (SPI_I2S_GetFlagStatus(SPI1, SPI_I2S_FLAG_RXNE) == SET) {}

@@ -1,7 +1,7 @@
 ﻿  EmbeddedProject3.c
-  stm32f4xx_hal_dma2d.c
-  stm32f4xx_hal_dma_ex.c
-  stm32f4xx_hal_dsi.c
+  stm32f4xx_hal_flash_ex.c
+  stm32f4xx_hal_flash_ramfunc.c
+  stm32f4xx_hal_fmpi2c.c
   EmbeddedProject3.c(3):
 C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h(85,2): error :  conflicting types for 'SPI_InitTypeDef'
      85 | }SPI_InitTypeDef;
