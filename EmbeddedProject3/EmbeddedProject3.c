@@ -5,16 +5,29 @@
 #ifdef __cplusplus
 extern "C"
 #endif
+uint8_t SPIData = 0;
+
 void SysTick_Handler(void)
 {
 	HAL_IncTick();
 	HAL_SYSTICK_IRQHandler();
 }
+void	CS_ON()
+{
+	GPIO_ResetBits(GPIOE, GPIO_PIN_3);
+}
+
+void CS_OFF()
+{
+	GPIO_SetBits(GPIOE, GPIO_PIN_3);
+}
 void SPI1_Init()
 {
 	HAL_Init();
-	static SPI_HandleTypeDef	        hspi;
-	__GPIOC_CLK_ENABLE();
+	SPI_HandleTypeDef	        hspi;
+	SPI_TypeDef                 *spi;
+	__GPIOA_CLK_ENABLE();
+	__GPIOE_CLK_ENABLE();
 	
 	GPIO_InitTypeDef GPIO_InitStructure;
 
@@ -23,9 +36,19 @@ void SPI1_Init()
 	GPIO_InitStructure.Mode = GPIO_MODE_AF_PP;
 	GPIO_InitStructure.Speed = GPIO_SPEED_FREQ_HIGH;
 	GPIO_InitStructure.Pull = GPIO_NOPULL;
-	HAL_GPIO_Init(GPIOC, &GPIO_InitStructure);
+	HAL_GPIO_Init(GPIOA, &GPIO_InitStructure);
 	
-	SPI_TypeDef             *spi;
+	HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+	HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_6);
+	HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_7);
+	
+	GPIO_InitStructure.Pin = GPIO_PIN_3;
+	
+	GPIO_InitStructure.Mode = GPIO_MODE_AF_PP;
+	GPIO_InitStructure.Speed = GPIO_SPEED_FREQ_HIGH;
+	GPIO_InitStructure.Pull = GPIO_NOPULL;
+	HAL_GPIO_Init(GPIOE, &GPIO_InitStructure);
+	
 	
 	__SPI1_CLK_ENABLE();
 
@@ -47,8 +70,13 @@ void SPI1_Init()
 
 int main(void)
 {
+	SPI1_Init();
 
-
+	SPI_I2S_SendData(SPI1, 0x8F);
+	while (SPI_I2S_GetFlagStatus(SPI1, SPI_I2S_FLAG_RXNE) == SET) {}
+	SPI_I2S_SendData(SPI1, 0x00);
+	while (SPI_I2S_GetFlagStatus(SPI1, SPI_I2S_FLAG_TXE) == SET) {}
+	SPIData = SPI_I2S_ReceiveData(SPI1);
 	for (;;)
 	{
 	}

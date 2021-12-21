@@ -1,5 +1,295 @@
 ﻿  EmbeddedProject3.c
-EmbeddedProject3.c(3,10): error :  stm32f4xx_spi.h: No such file or directory
-      3 | #include "stm32f4xx_spi.h"
-        |          ^~~~~~~~~~~~~~~~~
-  compilation terminated.
+  system_stm32f4xx.c
+  startup_stm32f407xx.c
+  stm32f4xx_hal.c
+  EmbeddedProject3.c(3):
+C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h(85,2): error :  conflicting types for 'SPI_InitTypeDef'
+     85 | }SPI_InitTypeDef;
+        |  ^~~~~~~~~~~~~~~
+  stm32f4xx_hal_adc.c
+  stm32f4xx_hal_adc_ex.c
+  stm32f4xx_hal_can.c
+  stm32f4xx_hal_cec.c
+  stm32f4xx_hal_cortex.c
+  stm32f4xx_hal_crc.c
+  stm32f4xx_hal_cryp.c
+  stm32f4xx_hal_cryp_ex.c
+  stm32f4xx_hal_dac.c
+  stm32f4xx_hal_dac_ex.c
+  C:\spi\EmbeddedProject3\stm32f4xx_hal_conf.h(403):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h(30):
+  EmbeddedProject3.c(1):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h(85,3): note :  previous declaration of 'SPI_InitTypeDef' was here
+     85 | } SPI_InitTypeDef;
+        |   ^~~~~~~~~~~~~~~
+  EmbeddedProject3.c(3):
+C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h(111,2): error :  conflicting types for 'I2S_InitTypeDef'
+    111 | }I2S_InitTypeDef;
+        |  ^~~~~~~~~~~~~~~
+  C:\spi\EmbeddedProject3\stm32f4xx_hal_conf.h(371):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h(30):
+  EmbeddedProject3.c(1):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2s.h(71,3): note :  previous declaration of 'I2S_InitTypeDef' was here
+     71 | } I2S_InitTypeDef;
+        |   ^~~~~~~~~~~~~~~
+  EmbeddedProject3.c(3):
+C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h(169): warning :  "IS_SPI_MODE" redefined
+    169 | #define IS_SPI_MODE(MODE) (((MODE) == SPI_Mode_Master) || \
+        | 
+  C:\spi\EmbeddedProject3\stm32f4xx_hal_conf.h(403):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h(30):
+  EmbeddedProject3.c(1):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h(524): note :  this is the location of the previous definition
+    524 | #define IS_SPI_MODE(__MODE__) (((__MODE__) == SPI_MODE_SLAVE) || \
+        | 
+  EmbeddedProject3.c(3):
+C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h(181): warning :  "IS_SPI_DATASIZE" redefined
+    181 | #define IS_SPI_DATASIZE(DATASIZE) (((DATASIZE) == SPI_DataSize_16b) || \
+        | 
+  C:\spi\EmbeddedProject3\stm32f4xx_hal_conf.h(403):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h(30):
+  EmbeddedProject3.c(1):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h(554): note :  this is the location of the previous definition
+    554 | #define IS_SPI_DATASIZE(__DATASIZE__) (((__DATASIZE__) == SPI_DATASIZE_16BIT) || \
+        | 
+  EmbeddedProject3.c(3):
+C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h(193): warning :  "IS_SPI_CPOL" redefined
+    193 | #define IS_SPI_CPOL(CPOL) (((CPOL) == SPI_CPOL_Low) || \
+        | 
+  C:\spi\EmbeddedProject3\stm32f4xx_hal_conf.h(403):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h(30):
+  EmbeddedProject3.c(1):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h(562): note :  this is the location of the previous definition
+    562 | #define IS_SPI_CPOL(__CPOL__) (((__CPOL__) == SPI_POLARITY_LOW) || \
+        | 
+  EmbeddedProject3.c(3):
+C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h(205): warning :  "IS_SPI_CPHA" redefined
+    205 | #define IS_SPI_CPHA(CPHA) (((CPHA) == SPI_CPHA_1Edge) || \
+        | 
+  C:\spi\EmbeddedProject3\stm32f4xx_hal_conf.h(403):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h(30):
+  EmbeddedProject3.c(1):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h(570): note :  this is the location of the previous definition
+    570 | #define IS_SPI_CPHA(__CPHA__) (((__CPHA__) == SPI_PHASE_1EDGE) || \
+        | 
+  EmbeddedProject3.c(3):
+C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h(217): warning :  "IS_SPI_NSS" redefined
+    217 | #define IS_SPI_NSS(NSS) (((NSS) == SPI_NSS_Soft) || \
+        | 
+  C:\spi\EmbeddedProject3\stm32f4xx_hal_conf.h(403):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h(30):
+  EmbeddedProject3.c(1):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h(578): note :  this is the location of the previous definition
+    578 | #define IS_SPI_NSS(__NSS__) (((__NSS__) == SPI_NSS_SOFT)       || \
+        | 
+  EmbeddedProject3.c(3):
+C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h(235): warning :  "IS_SPI_BAUDRATE_PRESCALER" redefined
+    235 | #define IS_SPI_BAUDRATE_PRESCALER(PRESCALER) (((PRESCALER) == SPI_BaudRatePrescaler_2) || \
+        | 
+  C:\spi\EmbeddedProject3\stm32f4xx_hal_conf.h(403):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h(30):
+  EmbeddedProject3.c(1):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h(587): note :  this is the location of the previous definition
+    587 | #define IS_SPI_BAUDRATE_PRESCALER(__PRESCALER__) (((__PRESCALER__) == SPI_BAUDRATEPRESCALER_2)   || \
+        | 
+  EmbeddedProject3.c(3):
+C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h(253): warning :  "IS_SPI_FIRST_BIT" redefined
+    253 | #define IS_SPI_FIRST_BIT(BIT) (((BIT) == SPI_FirstBit_MSB) || \
+        | 
+  C:\spi\EmbeddedProject3\stm32f4xx_hal_conf.h(403):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h(30):
+  EmbeddedProject3.c(1):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h(601): note :  this is the location of the previous definition
+    601 | #define IS_SPI_FIRST_BIT(__BIT__) (((__BIT__) == SPI_FIRSTBIT_MSB) || \
+        | 
+  EmbeddedProject3.c(3):
+C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h(267): warning :  "IS_I2S_MODE" redefined
+    267 | #define IS_I2S_MODE(MODE) (((MODE) == I2S_Mode_SlaveTx) || \
+        | 
+  C:\spi\EmbeddedProject3\stm32f4xx_hal_conf.h(371):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h(30):
+  EmbeddedProject3.c(1):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2s.h(543): note :  this is the location of the previous definition
+    543 | #define IS_I2S_MODE(__MODE__) (((__MODE__) == I2S_MODE_SLAVE_TX)  || \
+        | 
+  EmbeddedProject3.c(3):
+C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h(285): warning :  "IS_I2S_STANDARD" redefined
+    285 | #define IS_I2S_STANDARD(STANDARD) (((STANDARD) == I2S_Standard_Phillips) || \
+        | 
+  C:\spi\EmbeddedProject3\stm32f4xx_hal_conf.h(371):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h(30):
+  EmbeddedProject3.c(1):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2s.h(548): note :  this is the location of the previous definition
+    548 | #define IS_I2S_STANDARD(__STANDARD__) (((__STANDARD__) == I2S_STANDARD_PHILIPS)   || \
+        | 
+  EmbeddedProject3.c(3):
+C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h(302): warning :  "IS_I2S_DATA_FORMAT" redefined
+    302 | #define IS_I2S_DATA_FORMAT(FORMAT) (((FORMAT) == I2S_DataFormat_16b) || \
+        | 
+  C:\spi\EmbeddedProject3\stm32f4xx_hal_conf.h(371):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h(30):
+  EmbeddedProject3.c(1):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2s.h(554): note :  this is the location of the previous definition
+    554 | #define IS_I2S_DATA_FORMAT(__FORMAT__) (((__FORMAT__) == I2S_DATAFORMAT_16B)          || \
+        | 
+  EmbeddedProject3.c(3):
+C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h(316): warning :  "IS_I2S_MCLK_OUTPUT" redefined
+    316 | #define IS_I2S_MCLK_OUTPUT(OUTPUT) (((OUTPUT) == I2S_MCLKOutput_Enable) || \
+        | 
+  C:\spi\EmbeddedProject3\stm32f4xx_hal_conf.h(371):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h(30):
+  EmbeddedProject3.c(1):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2s.h(559): note :  this is the location of the previous definition
+    559 | #define IS_I2S_MCLK_OUTPUT(__OUTPUT__) (((__OUTPUT__) == I2S_MCLKOUTPUT_ENABLE) || \
+        | 
+  EmbeddedProject3.c(3):
+C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h(337): warning :  "IS_I2S_AUDIO_FREQ" redefined
+    337 | #define IS_I2S_AUDIO_FREQ(FREQ) ((((FREQ) >= I2S_AudioFreq_8k) && \
+        | 
+  C:\spi\EmbeddedProject3\stm32f4xx_hal_conf.h(371):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h(30):
+  EmbeddedProject3.c(1):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2s.h(562): note :  this is the location of the previous definition
+    562 | #define IS_I2S_AUDIO_FREQ(__FREQ__) ((((__FREQ__) >= I2S_AUDIOFREQ_8K)    && \
+        | 
+  EmbeddedProject3.c(3):
+C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h(350): warning :  "IS_I2S_CPOL" redefined
+    350 | #define IS_I2S_CPOL(CPOL) (((CPOL) == I2S_CPOL_Low) || \
+        | 
+  C:\spi\EmbeddedProject3\stm32f4xx_hal_conf.h(371):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h(30):
+  EmbeddedProject3.c(1):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2s.h(574): note :  this is the location of the previous definition
+    574 | #define IS_I2S_CPOL(__CPOL__) (((__CPOL__) == I2S_CPOL_LOW) || \
+        | 
+  EmbeddedProject3.c(3):
+C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h(396): warning :  "IS_SPI_DIRECTION" redefined
+    396 | #define IS_SPI_DIRECTION(DIRECTION) (((DIRECTION) == SPI_Direction_Rx) || \
+        | 
+  C:\spi\EmbeddedProject3\stm32f4xx_hal_conf.h(403):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h(30):
+  EmbeddedProject3.c(1):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h(532): note :  this is the location of the previous definition
+    532 | #define IS_SPI_DIRECTION(__MODE__) (((__MODE__) == SPI_DIRECTION_2LINES)        || \
+        | 
+  EmbeddedProject3.c(3):
+C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h(436): warning :  "I2S_FLAG_CHSIDE" redefined
+    436 | #define I2S_FLAG_CHSIDE                 ((uint16_t)0x0004)
+        | 
+  C:\spi\EmbeddedProject3\stm32f4xx_hal_conf.h(371):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h(30):
+  EmbeddedProject3.c(1):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2s.h(286): note :  this is the location of the previous definition
+    286 | #define I2S_FLAG_CHSIDE                  SPI_SR_CHSIDE
+        | 
+  EmbeddedProject3.c(3):
+C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h(437): warning :  "I2S_FLAG_UDR" redefined
+    437 | #define I2S_FLAG_UDR                    ((uint16_t)0x0008)
+        | 
+  C:\spi\EmbeddedProject3\stm32f4xx_hal_conf.h(371):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h(30):
+  EmbeddedProject3.c(1):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2s.h(282): note :  this is the location of the previous definition
+    282 | #define I2S_FLAG_UDR                     SPI_SR_UDR
+        | 
+  EmbeddedProject3.c(3):
+C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h(438): warning :  "SPI_FLAG_CRCERR" redefined
+    438 | #define SPI_FLAG_CRCERR                 ((uint16_t)0x0010)
+        | 
+  C:\spi\EmbeddedProject3\stm32f4xx_hal_conf.h(403):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h(30):
+  EmbeddedProject3.c(1):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h(318): note :  this is the location of the previous definition
+GCCCOMPILE : 318 | #define SPI_FLAG_CRCERR                 SPI_SR_CRCERR /* SPI error flag: CRC error flag                  */
+        | 
+  EmbeddedProject3.c(3):
+C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h(439): warning :  "SPI_FLAG_MODF" redefined
+    439 | #define SPI_FLAG_MODF                   ((uint16_t)0x0020)
+        | 
+  C:\spi\EmbeddedProject3\stm32f4xx_hal_conf.h(403):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h(30):
+  EmbeddedProject3.c(1):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h(319): note :  this is the location of the previous definition
+GCCCOMPILE : 319 | #define SPI_FLAG_MODF                   SPI_SR_MODF   /* SPI error flag: Mode fault flag                 */
+        | 
+  EmbeddedProject3.c(3):
+C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h(458): warning :  "IS_SPI_CRC_POLYNOMIAL" redefined
+    458 | #define IS_SPI_CRC_POLYNOMIAL(POLYNOMIAL) ((POLYNOMIAL) >= 0x1)
+        | 
+  C:\spi\EmbeddedProject3\stm32f4xx_hal_conf.h(403):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h(30):
+  EmbeddedProject3.c(1):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h(625): note :  this is the location of the previous definition
+    625 | #define IS_SPI_CRC_POLYNOMIAL(__POLYNOMIAL__) (((__POLYNOMIAL__) >= 0x1U) && ((__POLYNOMIAL__) <= 0xFFFFU) && (((__POLYNOMIAL__)&0x1U) != 0U))
+        | 
+  EmbeddedProject3.c(3):
+C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h(469): warning :  "SPI_IT_TXE" redefined
+    469 | #define SPI_IT_TXE                   SPI_I2S_IT_TXE
+        | 
+  C:\spi\EmbeddedProject3\stm32f4xx_hal_conf.h(403):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h(30):
+  EmbeddedProject3.c(1):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h(305): note :  this is the location of the previous definition
+    305 | #define SPI_IT_TXE                      SPI_CR2_TXEIE
+        | 
+  EmbeddedProject3.c(3):
+C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h(470): warning :  "SPI_IT_RXNE" redefined
+    470 | #define SPI_IT_RXNE                  SPI_I2S_IT_RXNE
+        | 
+  C:\spi\EmbeddedProject3\stm32f4xx_hal_conf.h(403):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h(30):
+  EmbeddedProject3.c(1):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h(306): note :  this is the location of the previous definition
+    306 | #define SPI_IT_RXNE                     SPI_CR2_RXNEIE
+        | 
+  EmbeddedProject3.c(3):
+C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h(471): warning :  "SPI_IT_ERR" redefined
+    471 | #define SPI_IT_ERR                   SPI_I2S_IT_ERR
+        | 
+  C:\spi\EmbeddedProject3\stm32f4xx_hal_conf.h(403):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h(30):
+  EmbeddedProject3.c(1):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h(307): note :  this is the location of the previous definition
+    307 | #define SPI_IT_ERR                      SPI_CR2_ERRIE
+        | 
+  EmbeddedProject3.c(3):
+C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h(473): warning :  "SPI_FLAG_RXNE" redefined
+    473 | #define SPI_FLAG_RXNE                SPI_I2S_FLAG_RXNE
+        | 
+  C:\spi\EmbeddedProject3\stm32f4xx_hal_conf.h(403):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h(30):
+  EmbeddedProject3.c(1):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h(315): note :  this is the location of the previous definition
+    315 | #define SPI_FLAG_RXNE                   SPI_SR_RXNE   /* SPI status flag: Rx buffer not empty flag       */
+        | 
+  EmbeddedProject3.c(3):
+C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h(474): warning :  "SPI_FLAG_TXE" redefined
+    474 | #define SPI_FLAG_TXE                 SPI_I2S_FLAG_TXE
+        | 
+  C:\spi\EmbeddedProject3\stm32f4xx_hal_conf.h(403):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h(30):
+  EmbeddedProject3.c(1):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h(316): note :  this is the location of the previous definition
+    316 | #define SPI_FLAG_TXE                    SPI_SR_TXE    /* SPI status flag: Tx buffer empty flag           */
+        | 
+  EmbeddedProject3.c(3):
+C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h(475): warning :  "SPI_FLAG_OVR" redefined
+    475 | #define SPI_FLAG_OVR                 SPI_I2S_FLAG_OVR
+        | 
+  C:\spi\EmbeddedProject3\stm32f4xx_hal_conf.h(403):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h(30):
+  EmbeddedProject3.c(1):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h(320): note :  this is the location of the previous definition
+GCCCOMPILE : 320 | #define SPI_FLAG_OVR                    SPI_SR_OVR    /* SPI error flag: Overrun flag                    */
+        | 
+  EmbeddedProject3.c(3):
+C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h(476): warning :  "SPI_FLAG_BSY" redefined
+    476 | #define SPI_FLAG_BSY                 SPI_I2S_FLAG_BSY
+        | 
+  C:\spi\EmbeddedProject3\stm32f4xx_hal_conf.h(403):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h(30):
+  EmbeddedProject3.c(1):
+  C:\Users\ddulg\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h(317): note :  this is the location of the previous definition
+    317 | #define SPI_FLAG_BSY                    SPI_SR_BSY    /* SPI status flag: Busy flag                      */
+        | 
+  stm32f4xx_hal_dcmi.c
