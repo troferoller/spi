@@ -1,6 +1,0 @@
-﻿  LEDBlink.c
-  Linking VisualGDB/Debug/EmbeddedProject2...
-  ------------------- Memory utilization report -------------------
-  Used FLASH: 2268 bytes out of 1024KB (0%)
-  Used SRAM: 32 bytes out of 128KB (0%)
-  Used CCMRAM: 0 bytes out of 64KB (0%)

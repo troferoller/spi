@@ -1,0 +1,5 @@
+﻿  EmbeddedProject3.c
+EmbeddedProject3.c(3,10): error :  stm32f4xx_spi.h: No such file or directory
+      3 | #include "stm32f4xx_spi.h"
+        |          ^~~~~~~~~~~~~~~~~
+  compilation terminated.
